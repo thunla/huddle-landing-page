@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Poppins:wght@400;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --violet: hsl(257, 40%, 49%);
+    --soft-magenta: hsl(300, 69%, 71%);
+    --white-color: hsl(0, 0%, 100%);
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+.container{
+    height: 100vh;
+    background: url('/images/bg-desktop.svg'), var(--violet);
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: column;
+    padding: 36px;
+}
+header{
+    height: 120px;
+}
+header img{
+    width: 200px;
+}
+.content__wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 36px;
+}
+
+.banner,
+.banner__description{
+    width: 50%;
+}
+.banner img{
+    width: 100%;
+}
+.banner__description{
+    color: var(--white-color);
+}
+.banner__description h1{
+    font-size: 2rem;
+    line-height: 2.8rem;
+    white-space: pre-line;
+    margin-bottom: 24px;
+}
+.banner__description p{
+    color: hsla(0, 0%, 100%, 0.8);
+    font-weight: 400;
+    line-height: 1.7rem;
+}
+.banner__description a{
+    text-decoration: none;
+    background-color: var(--white-color);
+    padding: 12px 64px;
+    display: block;
+    width: max-content;
+    margin-top: 24px;
+    border-radius: 30px;
+    color: var(--violet);
+}
+.banner__description a:hover,
+.banner__description a:focus,
+.banner__description a:active{
+    background-color: var(--soft-magenta);
+    color: var(--white-color);
+}
+
+.social__media{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+}
+.social__media a{
+    border: 1px solid var(--white-color);
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+.social__media a:hover,
+.social__media a:focus,
+.social__media a:active{
+    border-color: var(--soft-magenta);
+    color: var(--soft-magenta);
+}
+
+@media screen and (max-width: 768px) {
+    .container{
+        height: auto;
+        background: url('/images/bg-mobile.svg'), var(--violet);
+        background-repeat: no-repeat;
+        background-size: contain, cover;
+    }
+    .content__wrapper{
+        flex-direction: column;
+    }
+    header{
+        height: 70px;
+    }
+    header img{
+        width: 160px;
+    }
+    .banner,
+    .banner__description{
+        width: 100%;
+    }
+    .banner__description h1{
+        font-size: 1.5rem;
+        line-height: 2rem;
+        text-align: center;
+    }
+    .banner__description p{
+        line-height: 1.5rem;
+        text-align: center;
+    }
+    .banner__description a{
+        margin: 24px auto;
+    }
+    .social__media{
+        justify-content: center;
+    }
+    .social__media a{
+        width: 24px;
+        height: 24px;
+    }
+    .social__media a>i{
+        font-size: 0.75rem;
+    }
+}
